@@ -20,6 +20,8 @@ crash.*.log
 *.key
 *_key
 tf-lab-key*
+*.tfvars
+*.auto.tfvars
 secrets.auto.tfvars
 *.tfvars.json
 

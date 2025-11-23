@@ -62,12 +62,13 @@ You can test the module quickly by calling it from a scratch root module or by r
 
 ### environments/dev — End-to-end Environment
 1. `cd environments/dev`
-2. Update `terraform.tfvars`:
+2. Copy the sample variables file locally: `cp terraform.tfvars.example terraform.tfvars` (the `.tfvars` file is gitignored so you won't accidentally commit secrets).
+3. Update `terraform.tfvars`:
    - `project`, `region`, and CIDRs as needed.
    - `domain_name` and `hosted_zone_id` must reference a Route 53 public hosted zone you control for ACM DNS validation.
    - Optionally set `my_ip_cidr` if you uncomment the SSH ingress rule.
-3. Initialize Terraform. If you want to reuse the remote state bucket created earlier, add a `backend` block mirroring the values from `backend/main.tf` or run `terraform init -backend-config="bucket=..." ...`.
-4. `terraform plan` and `apply`.
+4. Initialize Terraform. If you want to reuse the remote state bucket created earlier, add a `backend` block mirroring the values from `backend/main.tf` or run `terraform init -backend-config="bucket=..." ...`.
+5. `terraform plan` and `apply`.
 
 Resources/skills:
 - Consuming the `modules/vpc` outputs for multi-AZ public & private subnets plus a NAT gateway.

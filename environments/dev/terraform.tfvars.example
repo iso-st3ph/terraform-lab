@@ -1,0 +1,14 @@
+project = "tf-dev"
+region  = "us-east-1"
+
+vpc_cidr = "10.10.0.0/16"
+
+public_subnets = [
+  "10.10.1.0/24",
+  "10.10.2.0/24"
+]
+
+my_ip_cidr      = "203.0.113.10/32" # Replace with your workstation IP in CIDR notation
+domain_name     = "example.com"     # Public domain in Route 53 for ACM validation
+hosted_zone_id  = "ZABCDEFGHIJKLM"  # Hosted zone ID that matches the domain above
+private_subnets = ["10.10.3.0/24", "10.10.4.0/24"]
