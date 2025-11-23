@@ -1,0 +1,27 @@
+# Terraform directories
+.terraform/
+**/.terraform/*
+
+# Local state
+terraform.tfstate
+terraform.tfstate.*
+**/terraform.tfstate
+**/terraform.tfstate.*
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Lock files
+.terraform.lock.hcl
+
+# Sensitive files
+*.pem
+*.key
+*_key
+tf-lab-key*
+secrets.auto.tfvars
+*.tfvars.json
+
+# VSCode
+.vscode/
